@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtIn.Text" xml:space="preserve">
+    <value>CREATE PROCEDURE addCorrespondence
+(IN  :subscriptionID		INTEGER,
+ IN  :dueDate				DATETIME,
+ IN  :statusID				INTEGER,
+ IN  :rptPeriodStartDate	DATETIME,
+ IN  :rptPeriodEndDate		DATETIME,
+ IN  :signedBy				VARCHAR(10),
+ IN  :sentBy				VARCHAR(10),
+ IN  :sentDate				DATETIME,
+ IN  :archivedDoc			VARCHAR(200),
+ IN  :userID				VARCHAR(10),
+ OUT :correspondenceID		INTEGER,
+ OUT :newCreatedBy			VARCHAR(10),
+ OUT :newCreatedDate		DATETIME,
+ OUT :newModifiedBy			VARCHAR(10),
+ OUT :newModifiedDate		DATETIME);
+
+
+BEGIN 
+DECLARE :currentDateTime DATETIME = Now();
+INSERT INTO Correspondence (SubscriptionID,
+                            DueDate,
+                            StatusID,
+                            RptPeriodStartDate,
+                            RptPeriodEndDate,
+                            SignedBy,
+                            SentBy,
+                            SentDate,
+                            ArchivedDoc,
+                            CreatedBy,
+                            CreatedDate,
+                            ModifiedBy,
+                            ModifiedDate)
+                   VALUES (:subscriptionID,
+                           :dueDate,
+                           :statusID,
+                           :rptPeriodStartDate,
+                           :rptPeriodEndDate,
+                           :signedBy,
+                           :sentBy,
+                           :sentDate,
+                           :archivedDoc,
+                           :userID,
+                           :currentDateTime,
+                           :userID,
+                           :currentDateTime);
+                               
+SET :correspondenceID = @@IDENTITY ;
+SET :newCreatedBy     = :userID;
+SET :newCreatedDate   = :currentDateTime;
+SET :newModifiedBy    = :userID;
+SET :newModifiedDate  = :currentDateTime;
+
+END
+
+CREATE PROCEDURE getCorrespondenceByID 
+(IN :correspondenceID INTEGER)  
+RETURNS 
+(correspondenceID	INTEGER,
+ subscriptionID		INTEGER,
+ dueDate			DATETIME,
+ statusID			INTEGER,
+ rptPeriodStartDate	DATETIME,
+ rptPeriodEndDate	DATETIME,
+ signedBy			VARCHAR(10),
+ sentBy				VARCHAR(10),
+ sentDate			DATETIME,
+ createdBy			VARCHAR(10),
+ createdDate		DATETIME,
+ modifiedBy			VARCHAR(10),
+ modifiedDate		DATETIME);
+
+
+BEGIN  
+SELECT	CorrespondenceID,
+		SubscriptionID,
+		DueDate,
+		StatusID,
+		RptPeriodStartDate,
+		RptPeriodEndDate,
+		SignedBy,
+		SentBy,
+		SentDate,
+		CreatedBy,
+		CreatedDate,
+		ModifiedBy,
+		ModifiedDate
+FROM Correspondence 
+WHERE CorrespondenceID = :correspondenceID; 
+END
+
+CREATE PROCEDURE getCorrespondenceBySubID 
+(IN :subscriptionID INTEGER)  
+RETURNS 
+(dueDate TIMESTAMP);
+
+
+BEGIN
+SELECT MAX(DueDate) FROM Correspondence 
+  WHERE SubscriptionID = :subscriptionID ;
+END
+
+CREATE PROCEDURE getCorrespondences
+(IN :subset         VARCHAR(20))
+RETURNS 
+(correspondenceID   INTEGER,
+ subscriptionID     INTEGER,
+ dueDate            DATETIME,
+ statusID           INTEGER,
+ rptPeriodStartDate	DATETIME,
+ rptPeriodEndDate	DATETIME,
+ signedBy           VARCHAR(10),
+ sentBy             VARCHAR(10),
+ sentDate           DATETIME,
+ createdBy          VARCHAR(10),
+ createdDate        DATETIME,
+ modifiedBy         VARCHAR(10),
+ modifiedDate       DATETIME,
+ archivedDoc        VARCHAR(200),
+ correspondenceType VARCHAR(50),
+SubscriptionReportDesc    VARCHAR(255),
+SubscriptionRecipientDesc VARCHAR(255),
+ medium				VARCHAR(50),
+ frequency			VARCHAR(50),
+ status             VARCHAR(50),
+ sentByName         VARCHAR(21));
+
+
+BEGIN  
+DECLARE :today  DATETIME = CURDATE();
+DECLARE :status VARCHAR(20) ;
+
+SELECT c.CorrespondenceID,
+       c.SubscriptionID,
+       c.DueDate,
+       c.StatusID,
+       c.RptPeriodStartDate,
+       c.RptPeriodEndDate,
+       c.SignedBy,
+       c.SentBy,
+       c.SentDate,
+       c.CreatedBy,
+       c.CreatedDate,
+       c.ModifiedBy,
+       c.ModifiedDate,
+       c.ArchivedDoc,
+       ct.Code AS correspondenceType, 
+       s.SubscriptionRptDesc as SubscriptionReportDesc,
+	   s.SubscriptionReciDesc as SubscriptionRecipientDesc,
+       cd1.LongName  AS medium,
+       cd2.LongName  AS frequency,
+       cd3.LongName  AS status,
+       IF(LOCATE(CHAR(0), u1.uname) &gt; 0, SUBSTRING(u1.uname, 1, LOCATE(CHAR(0), u1.uname) - 1), RTRIM(u1.uname)) AS sentByName
+FROM Correspondence c
+LEFT OUTER JOIN Subscription s
+ON c.SubscriptionID = s.SubscriptionID
+LEFT OUTER JOIN CorrespondenceType ct
+ON s.CorrespondenceTypeID = ct.CorrespondenceTypeID
+
+LEFT OUTER JOIN Code cd1
+ON s.MediumID = cd1.CodeID
+LEFT OUTER JOIN Code cd2
+ON s.FrequencyID = cd2.CodeID
+LEFT OUTER JOIN Code cd3
+ON c.StatusID = cd3.CodeID
+LEFT OUTER JOIN Users u1
+ON c.SentBy = u1.userid
+
+WHERE :subset = 'All'                                 OR
+     (:subset = 'Active' AND (status   = 'Pending'    OR 
+                              status   = 'Due'        OR 
+                              status   = 'Generating' OR
+                              status   = 'Sending'    OR 
+                              status   = 'Overdue'    OR
+                              status   = 'Failed'     OR
+                             (status   = 'Sent'       AND
+                              sentDate &gt;= :today)))   OR
+     (:subset = 'Review' AND (status   = 'Pending'    OR
+                              status   = 'Due'        OR
+                              status   = 'Generating' OR
+                              status   = 'Sending'))
+ORDER BY correspondenceType, dueDate ;
+END
+
+CREATE PROCEDURE updateCorrespondenceByID
+(IN  :correspondenceID		INTEGER,
+ IN  :subscriptionID		INTEGER,
+ IN  :dueDate				DATETIME,
+ IN  :statusID				INTEGER,
+ IN  :rptPeriodStartDate	DATETIME,
+ IN  :rptPeriodEndDate		DATETIME,
+ IN  :signedBy				VARCHAR(10),
+ IN  :sentBy				VARCHAR(10),
+ IN  :sentDate				DATETIME,
+ IN  :archivedDoc			VARCHAR(200),
+ IN  :userID				VARCHAR(10),
+ IN  :modifiedDate			DATETIME,
+ OUT :newModifiedBy			VARCHAR(10),    
+ OUT :newModifiedDate		DATETIME);
+
+BEGIN 
+  DECLARE :currentDateTime DATETIME = Now();
+  DECLARE :code            VARCHAR(20);
+  DECLARE :currentStatusID INTEGER ;
+  DECLARE :reportNo        INTEGER ;
+  DECLARE :stringDate      CHAR(10);
+
+  SET :stringDate = REPLACE(CAST(CURDATE() AS CHAR(10)), '-', '/');
+  
+  SELECT Code INTO :code FROM Code WHERE CodeID = :statusID;
+ 
+  IF :code = 'Sent' THEN
+     SELECT StatusID INTO :currentStatusID FROM Correspondence
+      WHERE CorrespondenceID = :correspondenceID;
+
+     IF :statusID &lt;&gt; :currentStatusID THEN
+        -- Update Subscription to show last sent details 
+        UPDATE Subscription   SET LastSent     = :currentDateTime,
+                                  LastSentBy   = :userID
+         WHERE SubscriptionID = :subscriptionID; 
+
+        -- Update RepTypes associated with this Correspondence/Subscription 
+        -- to show last sent details 
+        UPDATE RepType        SET DateOfLast   = :stringDate
+         WHERE ReportNo IN (SELECT ReportNo FROM SubscriptionReport
+         WHERE SubscriptionID = :subscriptionID); 
+     END IF
+  END IF
+
+  -- Now go ahead and update the Correspondence record
+
+  UPDATE Correspondence SET SubscriptionID     = :subscriptionID,
+                            DueDate            = :dueDate ,
+                            StatusID           = :statusID,
+                            RptPeriodStartDate = :rptPeriodStartDate,
+                            RptPeriodEndDate   = :rptPeriodEndDate,
+                            SignedBy           = :signedBy,
+                            SentBy             = :sentBy,
+                            SentDate           = :sentDate,
+                            ArchivedDoc        = :archivedDoc,
+                            ModifiedBy         = :userID,
+                            ModifiedDate       = :currentDateTime
+   WHERE CorrespondenceID  = :correspondenceID
+     AND ModifiedDate      = :modifiedDate;
+    
+  IF @@ROWCOUNT = 0 THEN
+    SIGNAL 'U0001', 'Row has been deleted or updated by another user' ;
+  ELSE
+    SET :newModifiedBy   = :userID;
+    SET :newModifiedDate = :currentDateTime;
+  END IF
+END</value>
+  </data>
+</root>
